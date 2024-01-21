@@ -49,4 +49,11 @@ Git vs GitHub
 			So we need to move the working copy to git copy folder --> then push it to GitHub.
 			To make the file status to untracked to tracked, we have to add the file to git.
 				--> git add "Learn_Git_GitHub.txt"
+				
+			Once it is added, it is like its in the staging area, to make it move to the git copy folder, we need to commit.
+				--> git commit -m "about git and git hub initial notes from Error Makes Clever Channel"
+				
+			So, now local git copy is updated with working copy changes.
+			But GitHub repo is still not updated, for that we have to push the changes.
+				--> git push origin main --> origin (GitHub Repo in this case "learn-git-github")
 			
