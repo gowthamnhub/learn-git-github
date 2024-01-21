@@ -1,0 +1,52 @@
+Git and GitHub
+---------------
+What is Git?
+	-> Git is a free and open source version control system designed to handle everything from small to very large projects with speed and efficiency.
+	-> Version control - is the practice of tracking and managing changes to software code.
+	
+Git vs GitHub
+--------------	
+	-> Git is version control system.
+	-> GitHub is a site that provides hosting for our repositories and tools to work with them.	
+	-> So, even BitBucket, GitBucket are also similar to GitHub.
+	
+	Download git from https://git-scm.com/.
+	
+	Once installed, to configure it in VS Code:
+	--------------------------------------------
+		--> Open View -> Terminal or Ctrl+` (back tick)
+		--> you can select the Git bash here as the terminal. We can also have it set to default.
+		--> To check the git version -> git --version or git -v.
+		--> clear to clear the terminal (this is not a git command).
+		--> To configure git globally
+				--> git config --global user.name "Gowthaman Jeganathan"
+				--> git config --global user.email "Gowthamnhub@gmail.com"
+			To check the user name / email:
+				--> git config user.name
+				--> git config user.email
+				
+		To clone a repo from GitHub to local folder:
+			-> git clone https://github.com/gowthamnhub/Advanced-CSharp.git (example).
+			
+		Created a repository in GitHub - "learn-git-github"	
+		Cloned to GitHub folder in local system	
+			git clone "https://github.com/gowthamnhub/learn-git-github.git"
+		
+		Added this file "Learn_Git_GitHub.txt" to the folder "learn-git-github"
+		Now I can see there is one change showing in Source Control menu as untracked file.
+
+		We can also view the status of the folder using below;	
+			
+		go to repo folder in VS Code terminal - 
+		--> cd learn-git-github
+		--> git status
+			
+		What is known as untracked? what is happening here? 	
+			Basically when we clone a repo to our local folder -> it will have two sections,
+				--> git copy folder (which does exist in GitHub)
+				--> another is git working copy (which we have not moved yet, or in progress one).
+				
+			So we need to move the working copy to git copy folder --> then push it to GitHub.
+			To make the file status to untracked to tracked, we have to add the file to git.
+				--> git add "Learn_Git_GitHub.txt"
+			
