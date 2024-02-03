@@ -40,7 +40,9 @@ Git vs GitHub
 		go to repo folder in VS Code terminal - 
 		--> cd learn-git-github
 		--> git status
-			
+
+To Push something from local to remote repo:
+--------------------------------------------			
 		What is known as untracked? what is happening here? 	
 			Basically when we clone a repo to our local folder -> it will have two sections,
 				--> git copy folder (which does exist in GitHub)
@@ -57,3 +59,84 @@ Git vs GitHub
 			But GitHub repo is still not updated, for that we have to push the changes.
 				--> git push origin main --> origin (GitHub Repo in this case "learn-git-github")
 			
+			So whole process would be => Insert/Modify document -> Add -> Commit -> Push
+			
+				==> Add(means moving changes to staging area)
+				==> Commit (means committing to git copy folder)
+				==> Push(means pushing changes to remote repo)
+				
+To Pull something from Remote:
+------------------------------	
+	git pull
+	
+How to create a repo from vs code and push it to remote?
+---------------------------------------------------------
+		-> Added a new folder to local folder "/d/GitHub/" as "NewRepo".
+		-> cd NewRepo -> To go inside the NewRepo folder.
+		-> Type git status - fatal: not a git repository (or any of the parent directories): .git
+		-> because this folder is not a git folder yet.
+		-> To make it git folder - 
+				--> git init -> Initialized empty Git repository in D:/GitHub/NewRepo/.git/
+				--> Now we can see .git folder inside NewRepo
+		-> I added two files to the NewRepo -> index.html, style.css
+		-> Now we need to add these two and push to remote.
+		-> But how do we push multiple files to staging, we cannot keep adding invidual saying 
+			git add index.htm, git add style.css	
+			
+		-> instead we can use "git add ."	--> moves all the changed files to staging.
+		-> Then commit - git commit -m "created index.html, style.css files"
+		-> To push "git push origin main" - Oooopsss! Error!!!!
+				error: src refspec main does not match any
+				error: failed to push some refs to 'origin'
+				
+		Because there is no remote repo yet to push these, so we need to create a NewRepo in remote and connect it to local.
+			-> to connect the remote to local folder, in the GitHub itself there is a command given to be used when we create a 
+			new repository.
+				-> git remote add origin https://github.com/gowthamnhub/NewRepo.git
+				-> Now try git origin push main
+				-> again error - error: src refspec main does not match any
+								 error:	failed to push some refs to 'https://github.com/gowthamnhub/NewRepo.git'
+				Because there is no main branch in the NewRepo created. Check it with below command.
+				We can see one thing when giving command "git branch" -> it says master.
+			As in recent, github renamed their master branch as main.
+			
+How to modify the branch name?
+-------------------------------			
+			--> git branch -M main
+			--> Now try "git push origin main" - it works.
+		
+How to view how many branches are there in the current repository we are working?
+---------------------------------------------------------------------------------
+		    --> git branch -a (lists all branches)	
+			
+To list down the branches in the repository?
+---------------------------------------------
+			--> git branch -a 
+
+	o=> Created a newBranch1 in "NewRepo" repository in GitHub site.
+	o=> In local, I am currently inside NewRepo - let me run "git branch -a".
+	o=> But it does not show newBranch1 - after we do "git pull", we can see "newBranch1" visible.	
+
+	If I have to switch to newBranch1 -> then I can do - "git checkout newBranch1"	(branch switched).
+	
+	Add a new file to newBranch1, added(staged) -> commit -> push (git push origin newBranch1)	
+		 
+		 --> "git push origin newBranch1"
+	
+	When I switch back to "main" branch -> then new file added does not show up, because that new file is added only to "newBranch1"
+
+		So "main" branch will be mostly having completed code, if any in progress stories/defects code changes will be done by newly created sub branches and then via PR process, it will be reviewed and merged to "main" branch.
+		
+How to view the difference between main and newBranch1?
+-------------------------------------------------------
+		-> git checkout main
+		-> git diff newBranch1 (shows the difference/modifide files)
+		
+How to merge one branch to another?
+------------------------------------
+		-> git merge newBranch1
+		-> Then do push to send it to remote main - git push origin main
+		
+
+		
+		 
