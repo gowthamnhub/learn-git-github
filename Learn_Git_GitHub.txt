@@ -138,5 +138,9 @@ How to merge one branch to another?
 		-> Then do push to send it to remote main - git push origin main
 		
 
-		
+What is a Pull request?
+-----------------------
+		First of all pull request cannot be raised from command prompt as it is not a git feature/command, it is feature provided by
+GitHub.
+				For creating new branch from command: "git branch newBranch2"
 		 
