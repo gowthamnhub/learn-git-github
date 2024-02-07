@@ -170,3 +170,5 @@ What are conflicts?
 							
 			We have to manually correct and resolve conflicts to be merged to main branch. 
 			Then after merging PR, we can see the resolved change would get appeared in main branch.
+			
+					https://education.github.com/git-cheat-sheet-education.pdf		
