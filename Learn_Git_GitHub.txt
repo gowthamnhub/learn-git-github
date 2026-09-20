@@ -90,8 +90,7 @@ How to create a repo from vs code and push it to remote?
 				error: failed to push some refs to 'origin'
 				
 		Because there is no remote repo yet to push these, so we need to create a NewRepo in remote and connect it to local.
-			-> to connect the remote to local folder, in the GitHub itself there is a command given to be used when we create a 
-			new repository.
+			-> to connect the remote to local folder, in the GitHub itself there is a command given to be used when we create a new repository.
 				-> git remote add origin https://github.com/gowthamnhub/NewRepo.git
 				-> Now try git origin push main
 				-> again error - error: src refspec main does not match any
